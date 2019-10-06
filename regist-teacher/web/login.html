@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style type="text/css">
+        /*页面主体背景图，flex布局，水平和垂直都居中，让登录的区域位于页面中间*/
+        body {
+            kackground-image: url("images/bg.jpg");
+            font-size: 14px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 登录区域样式，纵向flex布局，指定高宽边框背景色内边距等，里面元素的垂直间距 */
+        .login-box {
+            padding: 50px 5px 5px 5px;
+            width: 400px;
+            height: 220px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            /*  column-gap: 10px;  */
+            text-align: center;
+            box-shadow: 2px 5px 10px #aaa;
+        }
+
+        /*  用户名和密码输入框样式  */
+        .input-box {
+            width: 70%;
+            height: 30px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .btn-box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            width: 100px;
+            height: 40px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            background-color: rgb(38, 166, 154);
+            box-shadow: 2px 5px 10px #aaa;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        i {
+            color: rgb(85, 85, 85);
+            font-size: 16px;
+            margin-right: 15px;
+        }
+
+        label {
+            vertical-align: bottom;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form action="/login.do" method="post" class="login-box">
+        <label>
+            用户<i class="icon-user"></i>
+            <input type="text" name="username" class="input-box">
+        </label>
+        <label>
+            密码<i class="icon-lock"></i>
+            <input type="password" name="password" class="input-box">
+        </label>
+        <div class="btn-box">
+            <input type="submit" value="登录" class="btn">
+            <input type="reset" value="重置" class="btn">
+        </div>
+    </form>
+</div>
+</body>
+</html>
